@@ -29,7 +29,7 @@ const start = async () => {
         let user = res.user;
         let follow = user.follower_count;
         console.log(follow);
-        if (follow > lastFollowers) {
+        if (follow > lastFollowers && lastFollowers !== -1) {
           let diff = follow - lastFollowers;
           let timeBetween = Math.min(30 / (diff * 2), 1);
           console.log(
@@ -41,7 +41,7 @@ const start = async () => {
             await gpiop.write(11, on, console.log);
             on = !on;
           }, timeBetween * 1000);
-        } else if (follow < lastFollowers) {
+        } else if (follow < lastFollowers && lastFollowers !== -1) {
           console.log("Lost " + (lastFollowers - follow) + " followers.");
         }
         lastFollowers = follow;
