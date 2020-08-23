@@ -21,7 +21,7 @@
   "homepage": "https://github.com/itsmeow/TikTokGPIO#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "rpi-gpio": "^2.1.7",
-    "tiktok-api": "^0.4.1"
+    "node-fetch": "^2.6.0",
+    "rpi-gpio": "^2.1.7"
   }
 }
