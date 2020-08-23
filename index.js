@@ -24,7 +24,10 @@ const start = async () => {
         },
       }
     )
-      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
       .then((res) => {
         let user = res.user;
         let follow = user.follower_count;
