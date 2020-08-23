@@ -1,0 +1,27 @@
+{
+  "name": "tiktokgpio",
+  "version": "1.0.0",
+  "description": "Turns on GPIO port when a TikTok follower is gained",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsmeow/TikTokGPIO.git"
+  },
+  "keywords": [
+    "TikTok"
+  ],
+  "author": "itsmeow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsmeow/TikTokGPIO/issues"
+  },
+  "homepage": "https://github.com/itsmeow/TikTokGPIO#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "rpi-gpio": "^2.1.7",
+    "tiktok-api": "^0.4.1"
+  }
+}
