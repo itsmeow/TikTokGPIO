@@ -11,7 +11,7 @@ const start = async () => {
     }
     console.log("Re-fetching followers");
     fetch(
-      `https://api19-normal-c-useast1a.tiktokv.com/aweme/v1/user/profile/other/?sec_user_id=MS4wLjABAAAA_R08HKYsxll8gWW3obE6GyrM9BzXj7CImGuq0hzTm7OwMpkI31DqjPe-9i_Bjoyu&address_book_access=1&from=0&region=US&version_name=17.3.4&ts=1598218154&timezone_name=America%2FDetroit&device_type=SCH-S968C&iid=${process.env.install_id}&locale=en&app_type=normal&build_number=17.3.4&resolution=720*1280&aid=1233&app_name=musical_ly&appTheme=light&_rticket=1598218156773&device_platform=android&version_code=170304&carrier_region=US&uoo=0&dpi=320&openudid=${process.env.device_open_udid}&cdid=1b199e72-1b23-49d8-a62d-520ff0fe6ee8&cpu_support64=false&sys_region=US&ssmix=a&os_api=16&timezone_offset=-18000&device_id=${process.env.device_id}&pass-route=1&device_brand=samsung&manifest_version_code=2021703040&os_version=4.1.2&ab_version=17.3.4&ac2=wifi&host_abi=armeabi-v7a&update_version_code=2021703040&op_region=US&app_language=en&ac=wifi&pass-region=1&language=en&carrier_region_v2=310&storage_type=2&channel=googleplay`,
+      `https://api19-normal-c-useast1a.tiktokv.com/aweme/v1/user/profile/other/?sec_user_id=${process.env.sec_user_id}&address_book_access=1&from=0&region=US&version_name=17.3.4&ts=1598218154&timezone_name=America%2FDetroit&device_type=SCH-S968C&iid=${process.env.install_id}&locale=en&app_type=normal&build_number=17.3.4&resolution=720*1280&aid=1233&app_name=musical_ly&appTheme=light&_rticket=1598218156773&device_platform=android&version_code=170304&carrier_region=US&uoo=0&dpi=320&openudid=${process.env.device_open_udid}&cdid=${process.env.cdid}&cpu_support64=false&sys_region=US&ssmix=a&os_api=16&timezone_offset=-18000&device_id=${process.env.device_id}&pass-route=1&device_brand=samsung&manifest_version_code=2021703040&os_version=4.1.2&ab_version=17.3.4&ac2=wifi&host_abi=armeabi-v7a&update_version_code=2021703040&op_region=US&app_language=en&ac=wifi&pass-region=1&language=en&carrier_region_v2=310&storage_type=2&channel=googleplay`,
       {
         method: "GET",
         headers: {
@@ -49,3 +49,4 @@ const start = async () => {
   };
   updateFollowers();
 };
+start();
