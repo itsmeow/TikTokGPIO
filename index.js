@@ -5,7 +5,7 @@ let lastFollowers = -1;
 let interval = null;
 const start = async () => {
   await gpiop.setup(11, gpiop.DIR_OUT, gpiop.EDGE_NONE, console.log);
-  const updateFollowers = () => {
+  const updateFollowers = async () => {
     if (interval !== null) {
       clearInterval(interval);
     }
