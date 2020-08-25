@@ -45,6 +45,7 @@ class TikTokFollowerCount extends EventEmitter {
     this.emit("ready", this);
 
     setInterval(async () => {
+      console.log("Request followers");
       const previous = this.followers;
       const current = await getExactFollowerCount(username);
       const difference = current - previous;
@@ -55,6 +56,7 @@ class TikTokFollowerCount extends EventEmitter {
           current,
           difference,
         });
+      this.followers = current;
     }, interval);
   }
 }

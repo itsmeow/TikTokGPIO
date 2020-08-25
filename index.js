@@ -3,10 +3,12 @@ const TikTokFollowerCount = require("./tiktokfollow.js");
 const gpiop = require("rpi-gpio").promise;
 const GPIO_ON = process.env.GPIO;
 let interval = null;
+console.log("Initialized.");
 const start = async () => {
   if (GPIO_ON)
     await gpiop.setup(11, gpiop.DIR_OUT, gpiop.EDGE_NONE, console.log);
-  const tracker = new TikTokFollowerCount("wyatt.main", 30000);
+  const tracker = new TikTokFollowerCount("wyatt.main", 5000);
+  console.log("Starting application!");
   tracker.on("followerChange", async (data) => {
     if (interval !== null) {
       clearInterval(interval);
